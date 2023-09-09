@@ -10,18 +10,18 @@ async function countryData() {
 
     // Select a random country from the data (you can modify this logic as needed)
     const randomIndex = Math.floor(Math.random() * data.length);
-    const randomCountry = data[randomIndex];
+    const randomCount = data[randomIndex];
 
     // Create HTML content with country information
     const countryHTML = `
-      <h2>${randomCountry.name.common}</h2>
-      <p>Capital: ${randomCountry.capital}</p>
-      <p>Population: ${randomCountry.population.toLocaleString()}</p>
-      <p>Region: ${randomCountry.region}</p>
-      <p>Subregion: ${randomCountry.subregion}</p>
-      <p>Language(s): ${Object.values(randomCountry.languages).join(', ')}</p>
+      <h2>${randomCount.name.common}</h2>
+      <p>Capital: ${randomCount.capital}</p>
+      <p>Population: ${randomCount.population.toLocaleString()}</p>
+      <p>Region: ${randomCount.region}</p>
+      <p>Subregion: ${randomCount.subregion}</p>
+      <p>Language(s): ${Object.values(randomCount.languages).join(', ')}</p>
       <p>Flag:</p>
-      <img src="${randomCountry.flags.png}" alt="${randomCountry.name.common} Flag" width="200">
+      <img src="${randomCount.flags.png}" alt="${randomCount.name.common} Flag" width="200">
     `;
 
     // Update the HTML with the country information
